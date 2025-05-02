@@ -24,11 +24,6 @@ nav a {
     margin-right: 1.5rem;
 }
 
-/* .logo {
-    font-size: 1.2rem;
-    padding: .5rem;
-    font-weight: 450;
-} */
 .logo img {
     height: 28px;
     padding: 0.5rem;
@@ -90,33 +85,6 @@ nav a {
     display: none;
 }
 
-.submenu-active .submenu {
-    display: block;
-}
-
-.has-submenu i {
-    font-size: 12px;
-}
-
-.has-submenu>a::after {
-    font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 900;
-    content: "\f078";
-    color: white;
-    padding-left: 5px;
-}
-
-.subitem a {
-    padding: 10px 15px;
-}
-
-.submenu-active {
-    background-color: #111;
-    border-radius: 3px;
-}
-
 /* Tablet menu */
 @media all and (min-width: 700px) {
     .seperator {
@@ -155,11 +123,6 @@ nav a {
     .button a:hover {
         text-decoration: none;
     }
-
-    /* .button:not(.secondary) a:hover {
-        background: royalblue;
-        border-color: darkblue;
-    } */
 }
 
 /* Desktop menu */

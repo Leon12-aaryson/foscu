@@ -4,21 +4,19 @@ include "header.php";
 ?>
 <style>
     .main1 {
-        /* background: linear-gradient(to left, rgba(0, 256, 0, .8) 20%, rgba(0, 0, 0, .4)), url('static/images/tomatoes.jpg'); */
-        background: url('static/images/tomatoes1.png');
+        background: url('static/images/test2.png');
         background-size: cover;
         height: 90vh;
         object-fit: cover;
         padding: 2rem;
     }
 
-    .wetxt ul li{
+    .wetxt ul li {
         list-style: disc;
     }
 
     .focu1 {
-        /* background: linear-gradient(to top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 50%), url('static/images/veges.png'); */
-        background: url('static/images/veges.png');
+        background: url('static/images/test3.png');
         background-size: cover;
         object-fit: cover;
         height: 110vh;
@@ -27,8 +25,7 @@ include "header.php";
 
     @media (max-width: 650px) {
         .main1 {
-            background: linear-gradient(to left, rgba(15, 103, 0, 1) 20%, rgba(0, 0, 0, .4)), url('static/images/tomatoes.jpg');
-            /* background: url('static/images/tomatoes1.png'); */
+            background: linear-gradient(to left, rgba(15, 103, 0, 1) 20%, rgba(0, 0, 0, .4)), url('static/images/test2.png');
             background-size: cover;
             height: 100vh;
             object-fit: cover;
@@ -38,7 +35,7 @@ include "header.php";
 
     @media only screen and (min-width: 0px) and (max-width: 321px) {
         .main1 {
-            background: linear-gradient(to left, rgba(15, 103, 0, 1) 20%, rgba(0, 0, 0, .4)), url('static/images/tomatoes.jpg');
+            background: linear-gradient(to left, rgba(15, 103, 0, 1) 20%, rgba(0, 0, 0, .4)), url('static/images/test3.png');
             background-size: cover;
             height: 110vh;
             object-fit: cover;
@@ -48,8 +45,7 @@ include "header.php";
 
     @media (max-width: 769px) {
         .focu1 {
-            /* background: linear-gradient(to top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 50%), url('static/images/veges.png'); */
-            background: url('static/images/veges.png');
+            background: url('static/images/test3.png');
             background-size: cover;
             object-fit: cover;
             height: 140vh;
@@ -59,8 +55,7 @@ include "header.php";
 
     @media (max-width: 1024px) {
         .focu1 {
-            /* background: linear-gradient(to top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 50%), url('static/images/veges.png'); */
-            background: url('static/images/veges.png');
+            background: url('static/images/test3.png');
             background-size: cover;
             object-fit: cover;
             height: 130vh;
@@ -79,15 +74,14 @@ include "header.php";
                 knowledge transfer and policy dialogue.
                 We govern ourselves through unanimously defined and agreed
                 joint working modalities spelt out in our
-                Governance Charter.<br> <b>Our structures include:</b>
+                Governance Charter.<br></p>
+            <h4 class="mt-4">Our structures include:</h4>
             <ul style="text-align: left; margin-left: 1rem;">
                 <li>General Assembly</li>
                 <li>Steering Committee</li>
                 <li>Technical Working Groups</li>
                 <li>Secretariat</li>
             </ul>
-            </p>
-            <img src="static/images/bar.png" alt="">
         </div>
     </div>
     <div class="bgh">
@@ -100,9 +94,9 @@ include "header.php";
                     <i class='bx bx-bullseye'></i>
                     <p>An ecosystem of influence resulting from diversity,
                         capabilities, and inter-connection of different
-                        memebers of the coalition. This will ensure that
+                        members of the coalition. This will ensure that
                         network members add up to more than their parts,
-                        permitting simultaneous pushfor safer food using
+                        permitting simultaneous push for safer food using
                         different methods, platforms, financial resources
                         talents, and knowledge
                     </p>

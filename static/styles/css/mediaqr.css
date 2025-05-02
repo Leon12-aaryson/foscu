@@ -4,9 +4,9 @@
     }
 
     .wetxt {
-        float: right;
+        float: none;
         color: white;
-        text-align: center;
+        text-align: left;
         align-items: center;
         margin-top: 2rem;
         width: 90%;
@@ -81,23 +81,6 @@
     .strat,
     .value {
         margin-top: .8rem;
-    }
-
-    .memimgs {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-
-    .memimgs img {
-        padding: .5rem;
-        width: 150px;
-    }
-
-    .members {
-        width: 85%;
-        align-items: center;
-        position: relative;
-        margin: auto;
     }
 
     .partner .contact {
@@ -183,7 +166,7 @@
     }
 
     .navbar {
-        height: 80px;
+        height: 90px;
     }
 
     .navbar img {
@@ -223,16 +206,6 @@
         margin-top: .8rem;
     }
 
-    .memimgs {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-
-    .memimgs img {
-        padding: .5rem;
-        width: 150px;
-    }
-
     .txt1 {
         margin-left: 0.5rem;
     }
@@ -269,7 +242,7 @@
     }
 
     .navbar {
-        height: 80px;
+        height: 90px;
     }
 
     .navbar img {
@@ -383,12 +356,12 @@
     }
 
     .wetxt {
-        float: right;
+        /* float: right; */
         color: white;
-        text-align: center;
+        /* text-align: center; */
         align-items: center;
         margin-top: 6rem;
-        width: 50%;
+        width: 80%;
     }
 
     .westxt {

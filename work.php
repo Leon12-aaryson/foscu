@@ -4,7 +4,7 @@ include "header.php";
 ?>
 <style>
     .main3 {
-        background: url('static/images/main1.png');
+        background: url('static/images/test.png');
         background-size: cover;
         object-fit: cover;
         padding: 2rem;

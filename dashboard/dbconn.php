@@ -1,15 +1,17 @@
 <?php
 $servername = "localhost";
-$username = "u855062599_foscu";
-$password = "Leon12@48dex";
-// $username = "root";
-// $password = "";
+// $username = "u460308402_foscu";
+// $password = "Leon12@48dex";
+// $dbname = 'u460308402_foscu';
+$username = "root";
+$dbname = "foscu";
+$password = "root";
 
 
 
 try {
     // $conn = new PDO("mysql:host=$servername;dbname=foscu", $username, $password);
-    $conn = new PDO("mysql:host=$servername;dbname=u855062599_foscu", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {

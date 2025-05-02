@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 20, 2023 at 11:20 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.31
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 15, 2024 at 06:09 PM
+-- Server version: 10.6.14-MariaDB-cll-lve
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `foscu`
+-- Database: `u855062599_foscu`
 --
 
 -- --------------------------------------------------------
@@ -32,17 +32,17 @@ CREATE TABLE `events` (
   `eventname` varchar(250) NOT NULL,
   `eventdate` date NOT NULL,
   `enddate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `eventname`, `eventdate`, `enddate`) VALUES
-(1, 'Participation in food safety stakeholders\' awareness creation in Mbale City', '2023-07-24', '2023-07-28'),
-(2, 'Finalization of evidence synthesis report and value chain analysis work', '2023-07-01', '2023-07-31'),
-(3, 'Technical capacity building sessions for FoSCU members', '2023-08-01', '2023-08-04'),
-(4, 'Development of Strategic Plans for individual technical working groups', '2023-07-01', '2023-08-01');
+(22, 'FoSCU Annual General Meeting	', '2024-02-01', '2024-02-29'),
+(24, 'Presenting FoSCU\'s food safety policy recommendations in relevant national fora	', '2024-02-01', '2024-03-30'),
+(25, 'Food safety campaign on FoSCU twitter/X page	', '2024-02-01', '2024-02-29'),
+(26, 'Publication of tailored food safety reports, policy briefs and position paper on FoSCU platforms	', '2024-02-01', '2024-03-31');
 
 -- --------------------------------------------------------
 
@@ -55,7 +55,7 @@ CREATE TABLE `logos` (
   `organisation` varchar(40) NOT NULL,
   `picture` blob DEFAULT NULL,
   `upload_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `logos`
@@ -74,21 +74,54 @@ CREATE TABLE `recent` (
   `id` int(10) NOT NULL,
   `eventname` varchar(250) NOT NULL,
   `eventdate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `recent`
 --
 
 INSERT INTO `recent` (`id`, `eventname`, `eventdate`) VALUES
-(1, 'FoSCU Steering Committee Meeting', '2023-07-06'),
-(2, 'Presentation and Discussion of technical working group workplans', '2023-07-21'),
-(3, 'World Food Safety Day Commemoration: FoSCU leading keynote on chemical food contamination in Fort-portal/Kabarole', '2023-06-05'),
-(4, 'Finalization of evidence synthesis report and value chain analysis work', '2023-07-01'),
 (5, 'World Food Safety Day Commemoration: FoSCU leading keynote on chemical food contamination in Gulu City', '2023-06-07'),
-(6, 'Adoption of FoSCU Governance Charter, election of steering committee and technical working groups', '2023-05-25'),
-(7, 'Discussion and resolutions on Governance Charter', '2023-05-03'),
-(8, 'Inception of pilot project', '2023-04-19');
+(9, 'FoSCU Keynote on chemical food contamination during safe food stakeholders\' parliament in Mbale City', '2023-07-25'),
+(10, 'FoSCU members capacity building workshop', '2023-08-16'),
+(12, 'Technical Working Group Strategic plan development', '2023-09-30'),
+(13, 'Production of innovative food safety communication tools', '2023-09-30'),
+(14, '	Finalization of reports on food safety analysis in five value chains', '2023-08-31'),
+(15, 'Development of research and policy briefs on food safety in assessed crop and livestock value chains', '2023-09-30'),
+(16, 'Finalization of food safety-crop-animal evidence synthesis report', '2023-09-30'),
+(17, ' FoSCU Communication Materials’ review meeting ', '2023-10-13'),
+(18, 'Finalisation of FoSCU position paper, research reports and policy briefs on food safety ', '2023-10-30'),
+(19, 'Finalization of evidence synthesis report on food safety-crop-animal protection', '2023-10-30'),
+(20, 'Finalisation of Technical Working Group Strategies', '2023-10-30'),
+(21, 'FoSCU 5-year Strategic Plan Development ', '2023-11-30'),
+(22, 'Promotion of communication tools on non-chemical pest management', '2023-11-30'),
+(23, 'Review and finalisation of advocacy and communication tools', '2023-11-30'),
+(24, 'Review and finalisation of food safety assessment reports', '2023-11-30'),
+(25, 'FoSCU Steering Committee Meeting', '2024-02-02'),
+(26, 'FoSCU Awareness workshop for farmers (Mityana)', '2024-02-05'),
+(27, 'FoSCU Organisation Capacity Assessment (OCA)', '2024-01-30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usertable`
+--
+
+CREATE TABLE `usertable` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `code` mediumint(50) NOT NULL,
+  `status` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `usertable`
+--
+
+INSERT INTO `usertable` (`id`, `name`, `email`, `password`, `code`, `status`) VALUES
+(1, 'Oluk Aaron Leonard', 'aaronoluk4deleonardo@gmail.com', '$2y$10$b501BOu3CqBsEvJsmXm8juDPyFKFIetDe9UOZYeHE9D3SZfPiAzji', 0, 'verified');
 
 --
 -- Indexes for dumped tables
@@ -107,6 +140,12 @@ ALTER TABLE `recent`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `usertable`
+--
+ALTER TABLE `usertable`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -114,13 +153,19 @@ ALTER TABLE `recent`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `recent`
 --
 ALTER TABLE `recent`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `usertable`
+--
+ALTER TABLE `usertable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
