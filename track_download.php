@@ -1,15 +1,18 @@
 <?php
-// Enable error reporting
+// Enable error reporting (disable in production)
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include the database connection file
+// Include the database connection file and configuration file
 include "dashboard/dbconn.php";
+include "config.php";
 
-// Assuming the file name is passed via GET parameter
+// Check if file parameter is provided
 if (isset($_GET['file'])) {
     $file = basename($_GET['file']); // Sanitize to prevent path traversal
-    $filePath = 'static/briefs/' . $file; // Path to the file relative to the server's document root
+    // Use BASE_FILE_PATH if path=base, otherwise REPORTS_PATH
+    $basePath = isset($_GET['path']) && $_GET['path'] === 'base' ? BASE_FILE_PATH : REPORTS_PATH;
+    $filePath = $basePath . $file;
 
     if (file_exists($filePath)) {
         try {
@@ -27,11 +30,11 @@ if (isset($_GET['file'])) {
             header('Content-Length: ' . filesize($filePath));
             readfile($filePath);
             exit;
-        } catch(PDOException $e) {
-            echo "Error tracking download: " . $e->getMessage();
+        } catch (PDOException $e) {
+            echo "Error tracking download: " . htmlspecialchars($e->getMessage());
         }
     } else {
-        echo "File not found!";
+        echo "File not found at: " . htmlspecialchars($filePath);
     }
 } else {
     echo "No file specified.";

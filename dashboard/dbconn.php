@@ -5,7 +5,7 @@ $servername = "localhost";
 // $dbname = 'u460308402_foscu';
 $username = "root";
 $dbname = "foscu";
-$password = "root";
+$password = "";
 
 
 

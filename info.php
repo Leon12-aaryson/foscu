@@ -132,7 +132,7 @@ include "header.php";
                         <img src="static/images/female.jpg" alt="">
                         <div class="cardtxt">
                             <h5>
-                                <a href="#" target="" rel="noopener noreferrer">Papers</a>
+                                <a href="papers.php" target="" rel="noopener noreferrer">Articles</a>
                             </h5>
                             <!-- <h6 class="fw-normal text-muted">
                                 
