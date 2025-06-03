@@ -5,7 +5,8 @@ include "config.php"; // Include the configuration file
 
 $pdfs = [
   ["file" => "FoSCU Report_Members OCA.pdf", "title" => "FoSCU Report Members OCA"],
-  ["file" => "FOSCU Sythesis Report 2024-FINAL.pdf", "title" => "FOSCU Sythesis Report 2024"]
+  ["file" => "FOSCU Sythesis Report 2024-FINAL.pdf", "title" => "FOSCU Sythesis Report 2024"],
+  ["file" => "AFLATOXINS IN UGANDA 03062025. Final Printable version pdf.pdf", "title" => "AFFLATOXIS IN UGANDA 03062025"],
 ];
 ?>
 
