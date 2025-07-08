@@ -72,10 +72,6 @@
                                 <i class="fas fa-sign-out-alt mr-1"></i> Logout
                             </button>
                         </form>
-                    @else
-                        <a href="{{ route('login') }}" class="font-medium px-4 py-2 rounded-md text-white bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-colors duration-200">
-                            <i class="fas fa-sign-in-alt mr-1"></i> Login
-                        </a>
                     @endauth
                 </div>
             </div>
@@ -96,8 +92,6 @@
                                     <button type="submit" class="font-medium px-4 py-2 rounded-md text-white bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-colors duration-200 w-full text-left">Logout</button>
                                 </form>
                             </li>
-                        @else
-                            <li><a class="block font-medium px-4 py-2 rounded-md text-white bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-colors duration-200" href="{{ route('login') }}">Login</a></li>
                         @endauth
                     </ul>
                 </div>
@@ -113,11 +107,55 @@
         <footer class="bg-green-800 text-white py-8 mt-16">
             <div class="container mx-auto px-4 text-center">
                 <p>&copy; {{ date('Y') }} Food Safety Coalition Uganda. All rights reserved.</p>
+                @guest
+                    <!-- Hidden admin access - small dot in footer -->
+                    <div class="mt-4">
+                        <a href="{{ route('admin-access') }}" class="inline-block w-2 h-2 bg-green-700 rounded-full opacity-30 hover:opacity-100 transition-opacity duration-300" title="Admin Access"></a>
+                    </div>
+                @endguest
             </div>
         </footer>
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            // Hidden login access methods
+            @guest
+            // Method 1: Press Ctrl+Shift+L (or Cmd+Shift+L on Mac)
+            document.addEventListener('keydown', function(e) {
+                if (e.shiftKey && (e.ctrlKey || e.metaKey) && e.key === 'L') {
+                    e.preventDefault();
+                    window.location.href = '{{ route('login') }}';
+                }
+            });
+
+            // Method 2: Click logo 5 times quickly (within 3 seconds)
+            let logoClickCount = 0;
+            let logoClickTimer;
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const logo = document.querySelector('nav img[alt="FoSCU"]');
+                if (logo) {
+                    logo.addEventListener('click', function(e) {
+                        logoClickCount++;
+                        
+                        if (logoClickCount === 1) {
+                            logoClickTimer = setTimeout(function() {
+                                logoClickCount = 0;
+                            }, 3000);
+                        }
+                        
+                        if (logoClickCount === 5) {
+                            e.preventDefault();
+                            clearTimeout(logoClickTimer);
+                            logoClickCount = 0;
+                            window.location.href = '{{ route('login') }}';
+                        }
+                    });
+                }
+            });
+            @endguest
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
         
         <script>

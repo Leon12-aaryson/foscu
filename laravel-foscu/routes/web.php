@@ -35,6 +35,11 @@ Route::get('/infovid', [App\Http\Controllers\HomeController::class, 'videos'])->
 // Download tracking
 Route::get('/track-download', [DownloadController::class, 'trackDownload'])->name('track-download');
 
+// Hidden login access route
+Route::get('/admin-access', function () {
+    return redirect()->route('login');
+})->name('admin-access');
+
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

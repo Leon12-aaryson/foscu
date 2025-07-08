@@ -11,79 +11,111 @@
     </div>
 </div>
 
-<div class="container mx-auto px-4 py-16">
-    <div class="max-w-4xl mx-auto">
-        
-        <div class="prose lg:prose-xl mx-auto">
-            <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-                <h2 class="text-2xl font-semibold mb-4 text-primary">What We Do</h2>
-                <p class="text-lg text-gray-600 mb-6">
-                    FoSCU works across multiple areas to strengthen food safety systems in Uganda. 
-                    Our comprehensive approach addresses the entire food value chain from production to consumption.
+<!-- Main Content with Orange Background -->
+<div class="bg-gradient-to-br from-orange-400 to-orange-600 min-h-screen py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- TWG1: Food safety documentation, research, and development -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/3">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-8 mx-auto w-48 h-48 flex items-center justify-center">
+                            <img src="{{ asset('images/docu1.jpg') }}" alt="Documentation" class="w-32 h-32 object-cover rounded-full">
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <h2 class="text-4xl font-bold text-white mb-6">TWG1: Food safety documentation, research, and development</h2>
+                        <p class="text-white text-lg leading-relaxed">
+                            The group's work forms the core of our involvement in food safety scientific research the systemic generation and synthesis of evidence on food safety, that is context-specific. We put great emphasis on analysing food safety hazards through a value-chain approach. TGW1's work is guided by a research and development long-term strategy, agreed upon by all FoSCU members.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWG2: Food safety communication and awareness creation -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                    <div class="lg:w-1/3">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-8 mx-auto w-48 h-48 flex items-center justify-center">
+                            <img src="{{ asset('images/edu1.jpg') }}" alt="Communication" class="w-32 h-32 object-cover rounded-full">
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <h2 class="text-4xl font-bold text-white mb-6">TWG2: Food safety communication and awareness creation</h2>
+                        <p class="text-white text-lg leading-relaxed">
+                            Coalition members with communication expertise constitute this groups. Guided by an all agreed long-term communication strategy, TWG2 packages food safety information in innovative and interactive communication tools for use in awareness creation, targeting consumers of diverse categories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWG3: Food safety technical assistance and capacity building -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/3">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-8 mx-auto w-48 h-48 flex items-center justify-center">
+                            <img src="{{ asset('images/edu2.jpg') }}" alt="Training" class="w-32 h-32 object-cover rounded-full">
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <h2 class="text-4xl font-bold text-white mb-6">TWG3: Food safety technical assistance and capacity building</h2>
+                        <p class="text-white text-lg leading-relaxed">
+                            This group of FoSCU members coordinates trainings and knowledge transfer engagements targeting members of the coalition, and other stakeholders (farmers, consumers, input dealers, food food vendors among others). Its work is guided by a long-term capacity building strategy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWG4: Food safety governance, compliance, and normative -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                    <div class="lg:w-1/3">
+                        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-8 mx-auto w-48 h-48 flex items-center justify-center">
+                            <img src="{{ asset('images/docu2.jpg') }}" alt="Governance" class="w-32 h-32 object-cover rounded-full">
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <h2 class="text-4xl font-bold text-white mb-6">TWG4: Food safety governance, compliance, and normative</h2>
+                        <p class="text-white text-lg leading-relaxed">
+                            This group coordinates activities related to food safety governance, policy advocacy, and regulatory compliance. Working closely with government institutions and regulatory bodies, TWG4 ensures that food safety standards are properly implemented and monitored across all sectors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Section -->
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mt-16">
+                <h3 class="text-3xl font-bold text-white text-center mb-8">Our Impact</h3>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white mb-2">50+</div>
+                        <p class="text-white text-lg">Member Organizations</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white mb-2">1000+</div>
+                        <p class="text-white text-lg">People Trained</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-4xl font-bold text-white mb-2">15+</div>
+                        <p class="text-white text-lg">Research Reports</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <h3 class="text-3xl font-bold text-white mb-6">Join Our Mission</h3>
+                <p class="text-white text-lg mb-8">
+                    Be part of Uganda's food safety transformation. Together, we can build a safer food system for all.
                 </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-users text-4xl text-primary mb-2"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-center">Stakeholder Engagement</h3>
-                    <p class="text-gray-600">
-                        Building partnerships with government agencies, civil society organizations, 
-                        academic institutions, and private sector players to create a unified approach to food safety.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-graduation-cap text-4xl text-primary mb-2"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-center">Training & Education</h3>
-                    <p class="text-gray-600">
-                        Delivering comprehensive training programs on food safety practices, 
-                        regulatory compliance, and best practices for farmers, processors, and traders.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-microscope text-4xl text-primary mb-2"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-center">Research & Analysis</h3>
-                    <p class="text-gray-600">
-                        Conducting research on food safety challenges and opportunities 
-                        across various agricultural value chains in Uganda.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-bullhorn text-4xl text-primary mb-2"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-center">Advocacy & Policy</h3>
-                    <p class="text-gray-600">
-                        Advocating for improved food safety policies and regulations, 
-                        and supporting their implementation at national and local levels.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="bg-white p-8 rounded-lg shadow-lg mt-8">
-                <h3 class="text-2xl font-semibold mb-6 text-primary">Our Impact</h3>
-                <div class="grid md:grid-cols-3 gap-6 text-center">
-                    <div>
-                        <div class="text-3xl font-bold text-primary mb-2">50+</div>
-                        <p class="text-gray-600">Member Organizations</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-bold text-primary mb-2">1000+</div>
-                        <p class="text-gray-600">People Trained</p>
-                    </div>
-                    <div>
-                        <div class="text-3xl font-bold text-primary mb-2">15+</div>
-                        <p class="text-gray-600">Research Reports</p>
-                    </div>
+                <div class="space-x-4">
+                    <a href="{{ route('information-resources') }}" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+                        Learn More
+                    </a>
+                    <a href="{{ route('focus') }}" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors inline-block">
+                        Our Focus
+                    </a>
                 </div>
             </div>
         </div>
