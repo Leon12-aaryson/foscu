@@ -1,67 +1,95 @@
 @extends('layouts.main')
 
 @section('content')
-<!-- Hero Section -->
-<div class="relative h-96 bg-cover bg-center" style="background-image: url('{{ asset('images/agric.jpg') }}');">
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="text-center text-white px-4">
-            <h1 class="text-5xl font-bold mb-4">Our Focus</h1>
-            <p class="text-xl">Promoting food safety across Uganda's agricultural value chain</p>
+<!-- Main Focus Section with Green Background -->
+<div class="relative min-h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/agric.jpg') }}');">
+    <!-- Green Overlay -->
+    <div class="absolute inset-0 bg-green-700 bg-opacity-80"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- Guiding Question -->
+                <div class="text-center mb-16">
+                    <p class="text-white text-xl mb-8">Our existence and direction is guided by the question:</p>
+                    
+                    <!-- Quote with Orange Quotation Marks -->
+                    <div class="relative">
+                        <div class="text-primary text-8xl font-bold absolute -top-4 -left-4 opacity-80">"</div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight px-8">
+                            How can contamination-free food be realised in Uganda's agri-food system?
+                        </h1>
+                        <div class="text-primary text-8xl font-bold absolute -bottom-4 -right-4 opacity-80">"</div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Explanation -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-black bg-opacity-20 rounded-lg p-8 backdrop-blur-sm">
+                        <p class="text-white text-lg leading-relaxed mb-6">
+                            At FoSCU we acknowledge at least four broad categories of food safety hazards: 
+                            <span class="text-primary font-semibold">Chemical, Biological, Physical and Allergenic</span>. 
+                            Of these, chemical contamination is the most commonly spread across different value chain nodes. 
+                            From a broader technical perspective, FoSCU promotes the concept of 
+                            <span class="text-primary font-semibold">Integrated Pest Management (IPM)</span> 
+                            as the most realistic vehicle for transitioning to safe food from current food production 
+                            (predominantly conventional), towards the desired food production (predominantly agroecological measures), 
+                            taking into consideration sustainable management of the high burden of the crop and animal pests, 
+                            vectors and diseases.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container mx-auto px-4 py-16">
-    <div class="max-w-4xl mx-auto">        
-        <div class="prose lg:prose-xl mx-auto">
-            <p class="text-lg text-gray-600 mb-8">
-                The Food Safety Coalition Uganda (FoSCU) focuses on promoting food safety awareness, 
-                policy development, and capacity building across Uganda's agricultural and food systems.
+<!-- Orange Vision Statement Banner -->
+<div class="bg-primary py-12">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-white text-xl md:text-2xl font-semibold leading-relaxed">
+                We are strategically focused by a broad vision and a resounding motto that reminds us that we all have a 
+                <span class="font-bold">RIGHT</span> to consume and a <span class="font-bold">RESPONSIBILITY</span> 
+                to contribute to realization of safe food!!
             </p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mt-12">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Vision, Mission, Motto Section -->
+<div class="bg-gray-100 py-16" style="background-image: url('{{ asset('images/agric.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="bg-white bg-opacity-90 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-12">
+                    
+                    <!-- Our Vision -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-primary mb-4">Our Vision</h2>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            A society where all people sustainably access safe food
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Food Safety Awareness</h3>
-                    <p class="text-gray-600">
-                        Educating farmers, processors, and consumers about safe food handling practices 
-                        and the importance of food safety in the value chain.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-gavel text-white text-2xl"></i>
+                    
+                    <!-- Our Mission -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-primary mb-4">Our Mission</h2>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            To harness partnerships towards promoting sustainable food safety for all consumers in Uganda and beyond
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Policy Development</h3>
-                    <p class="text-gray-600">
-                        Working with government and stakeholders to develop and implement 
-                        comprehensive food safety policies and regulations.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-tools text-white text-2xl"></i>
+                    
+                    <!-- Our Motto -->
+                    <div class="text-center">
+                        <h2 class="text-4xl font-bold text-primary mb-4">Our Motto</h2>
+                        <p class="text-2xl text-gray-700 font-semibold">
+                            "Safe food for all by all"
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Capacity Building</h3>
-                    <p class="text-gray-600">
-                        Strengthening the capabilities of organizations and individuals 
-                        involved in food production and safety management.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-microscope text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Research & Innovation</h3>
-                    <p class="text-gray-600">
-                        Conducting research and promoting innovative solutions to address 
-                        food safety challenges in Uganda's context.
-                    </p>
+                    
                 </div>
             </div>
         </div>

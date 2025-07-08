@@ -42,7 +42,7 @@
                 
                 <!-- Logo for mobile -->
                 <a class="lg:hidden" href="{{ route('home') }}">
-                    <img src="{{ asset('images/FoSCU_Transparent.png') }}" alt="FoSCU" class="h-16">
+                    <img src="{{ asset('images/nav.png') }}" alt="FoSCU" class="h-16">
                 </a>
                 
                 <!-- Desktop Navigation -->
@@ -52,7 +52,7 @@
                         <li><a class="font-medium px-4 py-2 rounded-md text-white bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-colors duration-200 {{ request()->routeIs('who-we-are') ? 'bg-opacity-25 font-semibold' : '' }}" href="{{ route('who-we-are') }}">Who We Are</a></li>
                         <li class="mx-8">
                             <a href="{{ route('home') }}">
-                                <img src="{{ asset('images/FoSCU_Transparent.png') }}" alt="FoSCU" class="h-16 hover:scale-105 transition-transform duration-200">
+                                <img src="{{ asset('images/nav.png') }}" alt="FoSCU" class="h-16 hover:scale-105 transition-transform duration-200">
                             </a>
                         </li>
                         <li><a class="font-medium px-4 py-2 rounded-md text-white bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-colors duration-200 {{ request()->routeIs('our-work') ? 'bg-opacity-25 font-semibold' : '' }}" href="{{ route('our-work') }}">Our Work</a></li>
@@ -104,7 +104,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-green-800 text-white py-8 mt-16">
+        <footer class="bg-green-800 text-white py-8">
             <div class="container mx-auto px-4 text-center">
                 <p>&copy; {{ date('Y') }} Food Safety Coalition Uganda. All rights reserved.</p>
                 @guest
