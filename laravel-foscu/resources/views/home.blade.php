@@ -256,10 +256,10 @@
                                     @if($logo->image)
                                         @if($logo->website_url)
                                             <a href="{{ $logo->website_url }}" target="_blank" class="block w-full h-full">
-                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                                <img src="{{ asset('storage/' . $logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                                             </a>
                                         @else
-                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                            <img src="{{ asset('storage/' . $logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                                         @endif
                                     @else
                                         <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center rounded-xl">
@@ -281,30 +281,20 @@
                         <!-- Duplicate for seamless loop -->
                         @foreach($logos->where('status', 'active')->sortBy('display_order') as $logo)
                         <div class="carousel-item flex-shrink-0 mx-4">
-                            <div class="group relative">
-                                <!-- Logo Container -->
-                                <div class="w-36 h-28 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100/50 p-4 flex items-center justify-center">
-                                    @if($logo->image)
-                                        @if($logo->website_url)
-                                            <a href="{{ $logo->website_url }}" target="_blank" class="block w-full h-full">
-                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
-                                            </a>
-                                        @else
-                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
-                                        @endif
+                            <div class="w-36 h-28 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-4 flex items-center justify-center">
+                                @if($logo->image)
+                                    @if($logo->website_url)
+                                        <a href="{{ $logo->website_url }}" target="_blank" class="block w-full h-full">
+                                            <img src="{{ asset('storage/' . $logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                        </a>
                                     @else
-                                        <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center rounded-xl">
-                                            <span class="text-orange-600 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
-                                        </div>
+                                        <img src="{{ asset('storage/' . $logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
                                     @endif
-                                </div>
-                                
-                                <!-- Partner Name Tooltip -->
-                                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                                    <div class="bg-gray-800 text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap">
-                                        {{ $logo->partner_name }}
+                                @else
+                                    <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center rounded-xl">
+                                        <span class="text-orange-600 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
                                     </div>
-                                </div>
+                                @endif
                             </div>
                         </div>
                         @endforeach
