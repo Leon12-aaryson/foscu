@@ -30,7 +30,7 @@
                     <h3 class="text-lg font-semibold mb-3 text-gray-800">{{ $report['title'] }}</h3>
                     <p class="text-gray-600 mb-4 text-sm">{{ $report['description'] }}</p>
                     <a 
-                        href="{{ route('track-download', ['file' => basename($report['file'])]) }}" 
+                        href="{{ route('track-download', ['file' => $report['file']]) }}" 
                         class="bg-primary hover:bg-orange-600 text-white px-4 py-2 rounded inline-flex items-center transition-colors"
                     >
                         <i class="fas fa-download mr-2"></i>

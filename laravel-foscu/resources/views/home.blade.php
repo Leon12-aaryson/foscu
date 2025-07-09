@@ -10,11 +10,11 @@
     </video>
 </div>
 
-<!-- Twitter Feed Section -->
+<!-- Food Safety News Section -->
 <div class="bg-white py-12">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-8 text-primary">Food Safety News</h3>
+            <h3 class="text-3xl font-bold text-center mb-8 text-orange-500">Food Safety News</h3>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
@@ -65,7 +65,7 @@
 <div class="bg-gray-100 py-12">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-8 text-primary">Featured Videos</h3>
+            <h3 class="text-3xl font-bold text-center mb-8 text-orange-500">Our Youtube Videos</h3>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Video 1: Food Safety for Consumers -->
@@ -196,95 +196,159 @@
     </div>
 </div>
 
-<!-- Partners Section -->
-@if($logos->count() > 0)
-<div class="bg-gradient-to-r from-gray-50 to-gray-100 py-12">
+<!-- Our Events Photos Section -->
+<div class="bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-10 text-gray-800">Our Partners</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 text-orange-500">Our Events Photos</h2>
             
-            <!-- Enhanced Carousel Container -->
-            <div class="relative">
-                <!-- Carousel Wrapper -->
-                <div class="overflow-hidden rounded-2xl bg-white shadow-xl">
-                    <div class="relative">
-                        <!-- Gradient Overlays -->
-                        <div class="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-                        <div class="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
-                        
-                        <!-- Carousel Track -->
-                        <div id="partners-carousel" class="flex py-4 animate-scroll-smooth">
-                            @foreach($logos->where('status', 'active')->sortBy('display_order') as $logo)
-                            <div class="flex-shrink-0 mx-3">
-                                <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 w-32 h-24 border border-gray-100">
-                                    @if($logo->image)
-                                        @if($logo->website_url)
-                                            <a href="{{ $logo->website_url }}" target="_blank" class="block h-full">
-                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter hover:brightness-110 transition-all duration-300">
-                                            </a>
-                                        @else
-                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter hover:brightness-110 transition-all duration-300">
-                                        @endif
-                                    @else
-                                        <div class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center rounded">
-                                            <span class="text-gray-500 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
-                                        </div>
-                                    @endif
-                                </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Featured Event 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('{{ asset('images/docu1.jpg') }}');">
+                        <div class="h-full bg-black bg-opacity-30 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-bold mb-2">Development of food safety video coverage</h3>
                             </div>
-                            @endforeach
-                            
-                            <!-- Duplicate for seamless loop -->
-                            @foreach($logos->where('status', 'active')->sortBy('display_order') as $logo)
-                            <div class="flex-shrink-0 mx-3">
-                                <div class="bg-white rounded-lg p-3 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 w-32 h-24 border border-gray-100">
-                                    @if($logo->image)
-                                        @if($logo->website_url)
-                                            <a href="{{ $logo->website_url }}" target="_blank" class="block h-full">
-                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter hover:brightness-110 transition-all duration-300">
-                                            </a>
-                                        @else
-                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter hover:brightness-110 transition-all duration-300">
-                                        @endif
-                                    @else
-                                        <div class="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center rounded">
-                                            <span class="text-gray-500 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
                 
-                <!-- Navigation Buttons -->
-                <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 z-20 border border-gray-200">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-                <button id="carousel-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 z-20 border border-gray-200">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
+                <!-- Featured Event 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('{{ asset('images/docu2.jpg') }}');">
+                        <div class="h-full bg-black bg-opacity-30 flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-bold mb-2">FoSCU Annual General Meeting</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Partners Section -->
+@if($logos->count() > 0)
+<div class="bg-gradient-to-br from-orange-50 to-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Partners</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Working together with leading organizations to advance food safety across Uganda</p>
+            </div>
+            
+            <!-- Modern Carousel Container -->
+            <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden carousel-container">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-transparent"></div>
+                
+                <!-- Carousel Wrapper -->
+                <div class="relative py-8 px-4">
+                    <!-- Carousel Track -->
+                    <div id="partners-carousel" class="flex animate-scroll-smooth">
+                        @foreach($logos->where('status', 'active')->sortBy('display_order') as $logo)
+                        <div class="carousel-item flex-shrink-0 mx-4">
+                            <div class="group relative">
+                                <!-- Logo Container -->
+                                <div class="w-36 h-28 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100/50 p-4 flex items-center justify-center">
+                                    @if($logo->image)
+                                        @if($logo->website_url)
+                                            <a href="{{ $logo->website_url }}" target="_blank" class="block w-full h-full">
+                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                            </a>
+                                        @else
+                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                        @endif
+                                    @else
+                                        <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center rounded-xl">
+                                            <span class="text-orange-600 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
+                                        </div>
+                                    @endif
+                                </div>
+                                
+                                <!-- Partner Name Tooltip -->
+                                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                                    <div class="bg-gray-800 text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap">
+                                        {{ $logo->partner_name }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                        
+                        <!-- Duplicate for seamless loop -->
+                        @foreach($logos->where('status', 'active')->sortBy('display_order') as $logo)
+                        <div class="carousel-item flex-shrink-0 mx-4">
+                            <div class="group relative">
+                                <!-- Logo Container -->
+                                <div class="w-36 h-28 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100/50 p-4 flex items-center justify-center">
+                                    @if($logo->image)
+                                        @if($logo->website_url)
+                                            <a href="{{ $logo->website_url }}" target="_blank" class="block w-full h-full">
+                                                <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                            </a>
+                                        @else
+                                            <img src="{{ asset($logo->image) }}" alt="{{ $logo->partner_name }}" class="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                                        @endif
+                                    @else
+                                        <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center rounded-xl">
+                                            <span class="text-orange-600 text-xs text-center font-medium">{{ $logo->partner_name }}</span>
+                                        </div>
+                                    @endif
+                                </div>
+                                
+                                <!-- Partner Name Tooltip -->
+                                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                                    <div class="bg-gray-800 text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap">
+                                        {{ $logo->partner_name }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
             
             <!-- Partnership CTA -->
-            <div class="text-center mt-8">
-                <p class="text-gray-600 mb-4">Interested in partnering with us?</p>
-                <a href="{{ route('our-work') }}" class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center">
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Join our network of partners committed to improving food safety standards across Uganda</p>
+                <a href="{{ route('our-work') }}" class="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
-                    Learn More
+                    Become a Partner
                 </a>
             </div>
         </div>
     </div>
 </div>
 @endif
+
+<!-- Contact Section -->
+<div class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-orange-500">Contact Us</h2>
+            
+            <div class="bg-gray-50 rounded-lg p-8 text-center">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">SECRETARIAT</h3>
+                
+                <div class="space-y-4">
+                    <div class="text-gray-600">
+                        <span class="text-lg font-medium">Email: info@foscu.org</span>
+                    </div>
+                    
+                    <div class="text-gray-600">
+                        <span class="text-lg font-medium">P.O.Box 154968</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('styles')
@@ -299,16 +363,49 @@
     }
     
     .animate-scroll-smooth {
-        animation: scroll-smooth 40s linear infinite;
+        animation: scroll-smooth 20s linear infinite;
+        display: flex;
+        width: max-content;
+        flex-wrap: nowrap;
+        will-change: transform;
     }
     
     .animate-scroll-smooth:hover {
         animation-play-state: paused;
     }
     
-    /* Smooth carousel transition */
-    .carousel-transition {
-        transition: transform 0.5s ease-in-out;
+    /* Ensure smooth scrolling */
+    .carousel-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    /* Force flex items to not wrap */
+    .carousel-track {
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content;
+    }
+    
+    /* Ensure minimum width for carousel items */
+    .carousel-item {
+        flex-shrink: 0;
+        width: 160px; /* Fixed width for consistency */
+    }
+    
+    /* Enhanced logo hover effects */
+    .group:hover .filter {
+        filter: grayscale(0) brightness(1.1) contrast(1.1) !important;
+    }
+    
+    /* Smooth gradient backgrounds */
+    .bg-gradient-to-br {
+        background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    }
+    
+    .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
     }
 </style>
 @endpush
@@ -321,19 +418,14 @@ function toggleAccordion(id) {
     element.classList.toggle('hidden');
 }
 
-// Auto-show the first accordion item
 document.addEventListener('DOMContentLoaded', function() {
+    // Auto-show the first accordion item
     document.getElementById('upcoming').classList.remove('hidden');
     
-    // Enhanced carousel functionality
+    // Carousel hover functionality
     const carousel = document.getElementById('partners-carousel');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
     
-    if (carousel && prevBtn && nextBtn) {
-        let isAnimating = false;
-        let currentPosition = 0;
-        
+    if (carousel) {
         // Pause animation on hover
         carousel.addEventListener('mouseenter', () => {
             carousel.style.animationPlayState = 'paused';
@@ -343,41 +435,29 @@ document.addEventListener('DOMContentLoaded', function() {
             carousel.style.animationPlayState = 'running';
         });
         
-        // Manual navigation
-        function slideCarousel(direction) {
-            if (isAnimating) return;
+        // Ensure animation starts
+        carousel.style.animationPlayState = 'running';
+        
+        // Optional: Add fallback for browsers that don't support CSS animations
+        if (!carousel.style.animationName) {
+            // Fallback animation using JavaScript
+            let position = 0;
+            const speed = 0.5; // pixels per frame
             
-            isAnimating = true;
-            carousel.style.animationPlayState = 'paused';
-            carousel.classList.add('carousel-transition');
-            
-            const slideWidth = 152; // 32 (w-32) + 12 (mx-3) * 2
-            
-            if (direction === 'next') {
-                currentPosition -= slideWidth;
-            } else {
-                currentPosition += slideWidth;
+            function animate() {
+                position -= speed;
+                const maxWidth = carousel.scrollWidth / 2;
+                
+                if (Math.abs(position) >= maxWidth) {
+                    position = 0;
+                }
+                
+                carousel.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animate);
             }
             
-            carousel.style.transform = `translateX(${currentPosition}px)`;
-            
-            setTimeout(() => {
-                carousel.classList.remove('carousel-transition');
-                carousel.style.animationPlayState = 'running';
-                isAnimating = false;
-            }, 500);
+            animate();
         }
-        
-        prevBtn.addEventListener('click', () => slideCarousel('prev'));
-        nextBtn.addEventListener('click', () => slideCarousel('next'));
-        
-        // Reset position periodically to prevent drift
-        setInterval(() => {
-            if (!isAnimating) {
-                currentPosition = 0;
-                carousel.style.transform = 'translateX(0)';
-            }
-        }, 20000);
     }
 });
 </script>

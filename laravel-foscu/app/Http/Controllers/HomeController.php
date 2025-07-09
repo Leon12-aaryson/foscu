@@ -79,14 +79,14 @@ class HomeController extends Controller
         $reports = collect([
             [
                 'title' => 'FOSCU Synthesis Report 2024',
-                'description' => 'Comprehensive synthesis of food safety activities and outcomes',
-                'file' => 'briefs/FOSCU Sythesis Report 2024-FINAL.pdf',
+                'description' => 'Comprehensive synthesis of food safety activities and outcomes for 2024',
+                'file' => 'FOSCU Sythesis Report 2024-FINAL.pdf',
                 'category' => 'reports'
             ],
             [
                 'title' => 'FoSCU Members OCA Report',
-                'description' => 'Organizational capacity assessment of FoSCU members',
-                'file' => 'briefs/FoSCU Report_Members OCA.pdf',
+                'description' => 'Organizational capacity assessment of FoSCU members and stakeholders',
+                'file' => 'FoSCU Report_Members OCA.pdf',
                 'category' => 'reports'
             ]
         ]);
@@ -101,19 +101,37 @@ class HomeController extends Controller
             [
                 'title' => 'FoSCU Research Brief 01 - Maize Value Chain',
                 'description' => 'Food safety challenges and opportunities in the maize value chain',
-                'file' => 'briefs/FoSCU Research Brief 01_MaizeVC.pdf',
+                'file' => 'FoSCU Research Brief 01_MaizeVC.pdf',
                 'category' => 'research'
             ],
             [
                 'title' => 'FoSCU Research Brief 02 - Groundnuts Value Chain', 
                 'description' => 'Food safety assessment in groundnut production and processing',
-                'file' => 'briefs/FoSCU Research Brief 02_GnutsVC.pdf',
+                'file' => 'FoSCU Research Brief 02_GnutsVC.pdf',
                 'category' => 'research'
             ],
             [
                 'title' => 'FoSCU Research Brief 03 - Dairy Value Chain',
                 'description' => 'Food safety practices in dairy production and distribution',
-                'file' => 'briefs/FoSCU Research brief 03_DairyVC.pdf',
+                'file' => 'FoSCU Research brief 03_DairyVC.pdf',
+                'category' => 'research'
+            ],
+            [
+                'title' => 'FoSCU Research Brief 04 - Beef Value Chain',
+                'description' => 'Food safety standards in beef production and processing',
+                'file' => 'FoSCU Research brief 04_BeefVC.pdf',
+                'category' => 'research'
+            ],
+            [
+                'title' => 'FoSCU Research Brief 05 - Fruits and Vegetables Value Chain',
+                'description' => 'Food safety considerations in fruits and vegetables value chain',
+                'file' => 'FoSCU Research brief 05_FruitsandVegiezVC.pdf',
+                'category' => 'research'
+            ],
+            [
+                'title' => 'Aflatoxins in Uganda Report',
+                'description' => 'Comprehensive study on aflatoxin contamination in Uganda food systems',
+                'file' => 'AFLATOXINS IN UGANDA 03062025. Final Printable version pdf.pdf',
                 'category' => 'research'
             ]
         ]);
